@@ -1,5 +1,6 @@
 package com.example.helloworldappp;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,8 +15,9 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     TextView tvDemolabel;
-    Button changecolo
-    @OverriderButton;
+    Button changecolorButton;
+
+    @Override
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,18 +27,21 @@ public class MainActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
-            });
+        });
 
         this.tvDemolabel = findViewById(R.id.tvDemolabel);
-        Button changecolorButton = findViewById(R.id.btnchangecolor);
-        changeColorButton.setOnClickListener(new View.OnClickListener(){
+        changecolorButton = findViewById(R.id.btnchangecolor);
+        changecolorButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                tvDemoLabel.setBackgroundColor(Color.YELLOW);//Example: Change color to Yellow
+            public void onClick(View v) {
+                tvDemolabel.setBackgroundColor(Color.RED); //Example: Change color to Red
+            }
+        });
     }
 
     public void changeTextClick(View view) {
-
         tvDemolabel.setText("Hello Android!");
     }
+
+    //branchChange
 }
