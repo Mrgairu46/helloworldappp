@@ -9,8 +9,7 @@ import android.widget.TextView;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.core.view.ViewCompat;import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,10 +34,11 @@ public class MainActivity extends AppCompatActivity {
         changecolorButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tvDemolabel.setBackgroundColor(Color.YELLOW); // Example: Change color to Yellow
-            } // Added missing closing brace for onClick
+                // Changed from Color.YELLOW to Color.RED
+                tvDemolabel.setBackgroundColor(Color.RED);
+            }
         });
-    } // Closing brace for onCreate
+    }
 
     // Moved changeTextClick outside of onCreate
     public void changeTextClick(View view) {
@@ -50,4 +50,5 @@ public class MainActivity extends AppCompatActivity {
     // Main changes
 
     // branchChange
-} // Added missing closing brace for MainActivity class
+}
+
